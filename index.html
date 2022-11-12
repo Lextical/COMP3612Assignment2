@@ -1,0 +1,139 @@
+<!-- COMP 3612
+Assignment 2
+Alex Tang, Jesse Viehweger
+November 14th 2022 
+index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment 2: Song Browser</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="sample-songs.json"></script>
+    <script src="genres.json"></script>
+    <script src="artists.json"></script>
+    <script src="assign2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<header>
+    <div>
+        <h1>Song Browser</h1>
+    </div>
+    <div id="headBtn">
+        <button id="variableButton" class="browserView">Playlist</button>
+        <button id ="creditButton">Credits</button>
+        <!-- <figure></figure>
+        <div id="description">
+            
+        </div> -->
+    </div>
+    <p id="creditBox" class="hidden">Created by Alex Tang and Jesse Viehweger. Gitgub repository available at https://addThis.com</p>
+</header>
+<body>
+    <section id="browserView" class="visible">
+        <div id="songSearch">
+            <h2>Basic Song Search</h2>
+            <div id="seachContent">
+                <input type="radio" name="search" value="1" id="first">
+                <label for="title">Title</label>        
+                <input name="title" id="titleForm"><br>
+
+                <input type="radio" name="search" value="2" id="second">
+                <label for="artist">Artist</label>
+                <select name="artist" id="artistDrop" class="dropdown">
+                    <!-- programtically generate dropdown -->
+                </select><br>
+                <input type="radio" name="search" value="3" id="third">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genreDrop" class="dropdown">
+                    <!-- programtically generate dropdown -->
+                </select><br>
+
+                <!-- clear and filter buttons -->
+                <button id="btnClear">Clear</button>
+                <button id="btnFilter">Filter</button>
+            </div>
+        </div>
+        <div id="table">
+            <table id="tableSongs">
+                <h2>Browse / Search Results</h2>
+                <thead id="browseTableHead">
+                    <tr>
+                        <th>Title <button id="sortTitle">Sort</button></th>
+                        <th>Artist <button id="sortArtist">Sort</button></th>
+                        <th>Year <button id="sortYear">Sort</button></th>
+                        <th>Genre <button id="sortGenre">Sort</button></th>
+                        <th>Popularity <button id="sortPopularity">Sort</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- programtically generate rows here -->
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section id="songView" class="hidden">
+        <div id="songViewContent">
+            <div id="songInformation">
+                <h2>Song Information</h2>
+                <p id="songWriteUp"></p>
+                <ul id="dataList"> Analysis data:
+        
+                </ul>
+            </div>
+        
+            <div id="radarChart">
+                <h2>Radar Chart</h2>
+                <!-- Testing chart -->
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="playlistView" class="hidden">
+        <div id="playlistTable">
+            <table id="tablePlay">
+                <h2 id="playlistH2">Playlist Details</h2>
+                <p id="playlistAnalytics"></p>
+                <button id="clearPlaylist">Clear Playlist</button>
+                <thead id="playTableHead">
+                    <tr>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Year</th>
+                        <th>Genre</th>
+                        <th>Popularity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- programtically generate rows here -->
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <!-- <h2>Testing Footer REMOVE LATER</h2> -->
+        <p>Copyright &copy; 2022 Prestige World Wide</p>
+        <p>
+            <a href="#">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a>
+        </p>
+    </footer>
+
+
+
+</body>
+
+<!-- populate dropdown, 
+    add clear and filter buttons
+    add song to playlist
+    add sort buttons
+    add button to access playlist and credits in header
+    implement other pages  -->
