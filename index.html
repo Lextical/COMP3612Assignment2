@@ -1,9 +1,3 @@
-<!-- COMP 3612
-Assignment 2
-Alex Tang, Jesse Viehweger
-November 14th 2022 
-index.html -->
-
 <!DOCTYPE html>
 <html>
 
@@ -19,24 +13,32 @@ index.html -->
 </head>
 
 <header>
-    <div>
-        <h1>Song Browser</h1>
-    </div>
-    <div id="headBtn">
-        <button id="variableButton" class="browserView">Playlist</button>
-        <button id ="creditButton">Credits</button>
-        <!-- <figure></figure>
-        <div id="description">
-            
-        </div> -->
-    </div>
-    <p id="creditBox" class="hidden">Created by Alex Tang and Jesse Viehweger. Gitgub repository available at https://addThis.com</p>
+    <h1>Song Browser</h1>
+    <button id="variableButton">Playlist</button>
+    <button>Credits</button>
 </header>
 <body>
     <section id="browserView" class="visible">
+        <div id="table">
+            <table id="tableSongs">
+                <h2>Browse / Search Results</h2>
+                <thead id="browseTableHead">
+                    <tr>
+                        <th>Title<button id="sortTitle">Sort</button></th>
+                        <th>Artist<button id="sortArtist">Sort</button></th>
+                        <th>Year<button id="sortYear">Sort</button></th>
+                        <th>Genre<button id="sortGenre">Sort</button></th>
+                        <th>Popularity<button id="sortPopularity">Sort</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- programtically generate rows here -->
+
+                </tbody>
+            </table>
+        </div>
         <div id="songSearch">
             <h2>Basic Song Search</h2>
-            <div id="seachContent">
                 <input type="radio" name="search" value="1" id="first">
                 <label for="title">Title</label>        
                 <input name="title" id="titleForm"><br>
@@ -55,54 +57,31 @@ index.html -->
                 <!-- clear and filter buttons -->
                 <button id="btnClear">Clear</button>
                 <button id="btnFilter">Filter</button>
-            </div>
-        </div>
-        <div id="table">
-            <table id="tableSongs">
-                <h2>Browse / Search Results</h2>
-                <thead id="browseTableHead">
-                    <tr>
-                        <th>Title <button id="sortTitle">Sort</button></th>
-                        <th>Artist <button id="sortArtist">Sort</button></th>
-                        <th>Year <button id="sortYear">Sort</button></th>
-                        <th>Genre <button id="sortGenre">Sort</button></th>
-                        <th>Popularity <button id="sortPopularity">Sort</button></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- programtically generate rows here -->
-
-                </tbody>
-            </table>
         </div>
 
     </section>
 
     <section id="songView" class="hidden">
-        <div id="songViewContent">
-            <div id="songInformation">
-                <h2>Song Information</h2>
-                <p id="songWriteUp"></p>
-                <ul id="dataList"> Analysis data:
-        
-                </ul>
-            </div>
-        
-            <div id="radarChart">
-                <h2>Radar Chart</h2>
-                <!-- Testing chart -->
-                <canvas id="myChart"></canvas>
-            </div>
+        <div id="songInformation">
+            <h2>Song Information</h2>
+            <p id ="songWriteUp"></p>
+            <ul id="dataList"> Analysis data:
+                
+            </ul>
+        </div>
+
+        <div id="radarChart">
+            <h2>Radar Chart</h2>
+            <!-- Testing chart -->
+            <canvas id="myChart"></canvas>
         </div>
 
     </section>
 
-    <section id="playlistView" class="hidden">
+    <section id="playlistView">
         <div id="playlistTable">
             <table id="tablePlay">
-                <h2 id="playlistH2">Playlist Details</h2>
-                <p id="playlistAnalytics"></p>
-                <button id="clearPlaylist">Clear Playlist</button>
+                <h2>Playlist Details</h2>
                 <thead id="playTableHead">
                     <tr>
                         <th>Title</th>
@@ -119,13 +98,6 @@ index.html -->
             </table>
         </div>
     </section>
-    <footer>
-        <!-- <h2>Testing Footer REMOVE LATER</h2> -->
-        <p>Copyright &copy; 2022 Prestige World Wide</p>
-        <p>
-            <a href="#">About Us</a> | <a href="#">Privacy Policy</a> | <a href="#">Sitemap</a>
-        </p>
-    </footer>
 
 
 
