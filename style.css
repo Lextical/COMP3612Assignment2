@@ -1,22 +1,136 @@
+/* COMP 3612
+Assignment 2
+Alex Tang, Jesse Viehweger
+November 14th 2022
+style.css */
+
 .hidden {
     display: none;
 }
 
-#tableSongs{
+#tableSongs, #tablePlay{
     display: inline-block;
-    width: 1200px;
+    width: 100%;
     height: 500px;
     overflow: auto;
+    background-color: #d1d1d1;
 } 
 
 #table{
-    background-color: #d1d1d1;
-    width: 1200px;
+    display: inline-block;
+    background-color: #adadad;
+    width: 70%;
+    margin-top: 10px;
+    vertical-align: top;
+    margin-bottom: 10px;
 }
 
-/* #songSearch{
+#playlistTable{
+    display: block;
+    background-color: #adadad;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+}
+
+#clearPlaylist{
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+#playlistH2, #playlistAnalytics{
+    margin-left: 15px;
+}
+
+#seachContent{
     background-color: #d1d1d1;
-} */
+    padding-bottom: 397px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
 
+#songSearch{
+    display: inline-block;
+    background-color: #adadad;
+    margin-bottom: 0px;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-right: 5px;
+    height: 572px;
+    width: 28%
+}
 
+body{
+    background-color: #f1f1f1;
+}
 
+header{
+    display: block;
+    background-color: #979797;
+    padding-bottom: 20px;
+    border-top: 0px;
+}
+
+#headBtn{
+    padding-left: 15px;
+}
+
+header>div>h1{
+    text-align: center;
+    background-color: #757575;
+    display: block;
+}
+
+footer{
+    display: block;
+    background-color: #979797;
+    padding: 1em;
+}
+
+#creditBox{
+    background-color: #979797;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    background-color: rgb(54, 54, 54)
+}
+
+#songInformation{
+    background-color: #d1d1d1;
+    display: inline-block;
+    width: 38%;
+    margin-top: 10px;
+    height: 98%;
+}
+
+#radarChart{
+    background-color: #d1d1d1;
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    margin-top: 10px;
+    height: 98%;
+    overflow: auto;
+}
+
+#myChart{
+    overflow: auto;
+}
+
+#songViewContent{
+    height: 600px;
+    margin-bottom: 10px;
+}
+
+.titleLink{
+    color: #21155e;
+    text-decoration: underline;
+}
+
+.titleLink:hover{
+    color: #4f4c5b;
+}
